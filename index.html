@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabiha - Frontend Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#home">Sabiha Naaz</a>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#experience" class="nav-link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content reveal-left">
+          <h1 class="hero-title">
+            Hello, I'm <span class="highlight">Sabiha</span>
+          </h1>
+          <h2 class="hero-subtitle">Frontend Developer</h2>
+          <p class="hero-description">
+            Creating beautiful and functional web experiences with modern
+            technologies
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn-primary">View My Work</a>
+            <a href="#contact" class="btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-image reveal-right">
+          <div class="hero-img-container">
+            <img src="hero-img.jpg" alt="Profile Picture" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title reveal-up">About Me</h2>
+        <div class="about-content">
+          <div class="about-text reveal-left">
+            <p>
+              I'm a passionate frontend developer with a love for creating
+              intuitive and visually appealing web applications. With expertise
+              in modern web technologies, I bring ideas to life through clean
+              code and thoughtful design.
+            </p>
+            <p>
+              When I'm not coding, you can find me exploring new technologies,
+              contributing to open-source projects, or enjoying a good cup of
+              coffee while planning my next project.
+            </p>
+            <a
+              href="Sabiha Resume.pdf"
+              target="_blank"
+              class="btn-outline"
+              download
+            >
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+          </div>
+          <div class="skills reveal-right">
+            <h3>Skills</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <span>HTML5</span>
+                <div class="skill-progress">
+                  <div class="progress-bar" data-skill="100"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <span>CSS3</span>
+                <div class="skill-progress">
+                  <div class="progress-bar" data-skill="95"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <span>JavaScript</span>
+                <div class="skill-progress">
+                  <div class="progress-bar" data-skill="80"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <span>React</span>
+                <div class="skill-progress">
+                  <div class="progress-bar" data-skill="75"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title reveal-up">My Projects</h2>
+        <div class="project-filters reveal-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="html">HTML</button>
+          <button class="filter-btn" data-filter="javascript">
+            JavaScript
+          </button>
+          <button class="filter-btn" data-filter="css">CSS</button>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+          <!-- Simon Says Game -->
+          <div class="project-card reveal-up" data-category="javascript css">
+            <div class="project-image">
+              <img src="Simon Says Game.png" alt="Simon Says Game" />
+              <div class="project-overlay">
+                <button class="btn-view" onclick="openModal('project1')">
+                  View Details
+                </button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Simon Says Game</h3>
+              <p>
+                A classic memory game built with vanilla JavaScript featuring
+                colorful sequences, sound effects, and progressive difficulty
+                levels.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+              <a
+                href="https://sabiha9958.github.io/Simon-Say/"
+                class="project-link"
+                target="_blank"
+              >
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- E-Commerce Platform -->
+          <div class="project-card reveal-up" data-category="html css">
+            <div class="project-image">
+              <img src="The Global Bite.png" alt="E-Commerce App" />
+              <div class="project-overlay">
+                <button class="btn-view" onclick="openModal('project2')">
+                  View Details
+                </button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>E-Commerce Platform</h3>
+              <p>
+                A clean, vibrant menu section featuring global flavors—Korean,
+                Italian, Indian—paired with rich imagery.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5</span>
+              </div>
+              <a
+                href="https://sabiha9958.github.io/Index1/"
+                class="project-link"
+                target="_blank"
+              >
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- Weather Dashboard -->
+          <div
+            class="project-card reveal-up"
+            data-category="javascript css html"
+          >
+            <div class="project-image">
+              <img src="Weather App.png" alt="Weather App" />
+              <div class="project-overlay">
+                <button class="btn-view" onclick="openModal('project3')">
+                  View Details
+                </button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Weather Dashboard</h3>
+              <p>
+                Interactive weather application with location-based forecasts,
+                charts, and beautiful animations.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+              <a
+                href="https://sabiha9958.github.io/Weather/"
+                class="project-link"
+                target="_blank"
+              >
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- TrackIt -->
+          <div
+            class="project-card reveal-up"
+            data-category="javascript css html"
+          >
+            <div class="project-image">
+              <img src="TrackIt.png" alt="Task Manager" />
+              <div class="project-overlay">
+                <button class="btn-view" onclick="openModal('project4')">
+                  View Details
+                </button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>TrackIt</h3>
+              <p>
+                A sleek and responsive dashboard designed to simplify personal
+                budgeting and expense tracking with visual insights.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <a
+                href="https://sabiha9958.github.io/TrackIt/"
+                class="project-link"
+                target="_blank"
+              >
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- To-Do-List -->
+          <div class="project-card reveal-up" data-category="html css">
+            <div class="project-image">
+              <img src="To-do-App.png" alt="Weather App" />
+              <div class="project-overlay">
+                <button class="btn-view" onclick="openModal('project5')">
+                  View Details
+                </button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>To-Do-App</h3>
+              <p>
+                A sleek and motivational task manager built to boost
+                productivity with clarity and flair.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">HTML5</span>
+              </div>
+              <a
+                href="https://sabiha9958.github.io/Weather/"
+                class="project-link"
+                target="_blank"
+              >
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <h2 class="section-title reveal-up">Experience & Education</h2>
+        <div class="timeline">
+          <div class="timeline-item reveal-left">
+            <div class="timeline-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="timeline-content">
+              <h3>Front-End Web Developer (Self-Initiated Projects)</h3>
+
+              <span class="timeline-date">2025 - Present</span>
+              <p>
+                Gaining hands-on experience in building responsive and
+                user-friendly websites using HTML, CSS, and JavaScript.
+                Continuously learning modern web development practices and tools
+                through self-initiated projects and online resources.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-left">
+            <div class="timeline-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+              <h3>Diploma in Computer Science & engineering</h3>
+              <h4>Galgotias University</h4>
+              <span class="timeline-date">2023 - 2026</span>
+              <p>
+                Diploma in Computer Science & engineering with focus on web
+                development, algorithms, and software engineering principles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title reveal-up">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info reveal-left">
+            <h3>Let's work together!</h3>
+            <p>
+              I'm always interested in new opportunities and exciting projects.
+              Feel free to reach out if you'd like to collaborate.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>khatoonrizwana4567@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-location-dot"></i>
+                <span>Delhi, India</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/Sabiha9958" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sabiha-naaz9/"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=khatoonrizwana4567@gmail.com&su=Contact%20from%20Portfolio&body=Hi%20Sabiha,%20I'd%20like%20to%20connect%20with%20you!"
+                target="_blank"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a
+                href="https://www.codechef.com/users/zany_wasp_07"
+                target="_blank"
+                title="My CodeChef Profile"
+              >
+                <img
+                  src="codechef-icon.jpg"
+                  alt="CodeChef"
+                  width="20"
+                  height="20"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Updated Form with proper classes -->
+          <form
+            class="contact-form reveal-right"
+            action="https://formspree.io/f/manbbndp"
+            method="POST"
+          >
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <span class="form-line"></span>
+            </div>
+            <button type="submit" class="btn-primary">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Modals -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
